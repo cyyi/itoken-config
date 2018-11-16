@@ -1,24 +1,15 @@
 spring:
   application:
-    name: itoken-config
+    name: itoken-zipkin
   boot:
     admin:
       client:
         url: http://192.168.168.134:8084
-  cloud:
-    config:
-      label: master
-      server:
-        git:
-          uri: https://github.com/cyyi/itoken-config.git
-          search-paths: respo
-          username: 469034277@qq.com
-          password: cai2491339
   zipkin:
     base-url: http://192.168.168.134:9411
 
 server:
-  port: 8888
+  port: 9411
 
 eureka:
   client:
@@ -33,3 +24,7 @@ management:
     web:
       exposure:
         include: health,info
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
