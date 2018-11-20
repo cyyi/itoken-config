@@ -1,9 +1,0 @@
-language: java
-sudo: false
-
-jobs:
-  include:
-  - stage: test
-    script:
-    - mvn clean
-    - echo "hello"
